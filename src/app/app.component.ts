@@ -8,5 +8,19 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Ejemplo1';
+  title = 'fundamentos';
+  //propiedades
+  nombre ='Guillermo';
+  aniosServicio =3;
+  email='guillermovb71@mail.com';
+  activo=false;
+  alumnos = [25,24,26];
+  //funcion que muestra si esta activo o no 
+  esActivo(){
+    if(this.activo){
+      return"Empleado activo";
+    } else{
+      return"Empleado Inactivo";
+    }
+  }
 }
