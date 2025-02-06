@@ -2,10 +2,34 @@
   <h1>Fundamentos de Angular</h1>
 
   <div>
-    <h4>Interpolacion</h4>
-    <p>Nombre del maestro: {{nombre}}</p>
-    <p>años de servicio: {{aniosServicio}}</p>
+    <h4>Interpolación</h4>
+    <p>Nombre del alumno: {{nombre}}</p>
+    <p>Años de estudio: {{aniosServicio}}</p>
     <p>Correo: {{email}}</p>
-    <p>Uno +Uno ={{1+1}}</p>
+    <p>Uno + Uno = {{1+1}}</p>
+    <p>Estudiante {{activo ? 'activo' : 'inactivo'}}</p>
+    <p>Total de alumnos: {{totalAlumnos}}</p>
   </div>
+
+  <h3>Control de flujo (if, for, switch)</h3>
+  <p>{{ obtenerAntiguedad() }}</p>
+
+  <h3>Listado de productos</h3>
+  <ul>
+    <li *ngFor="let producto of productos">
+      {{producto.id}} {{producto.nombre}} - {{producto.precio}}
+    </li>
+  </ul>
+
+  <h3>Número aleatorio entre 1 y 3</h3>
+  <p>{{numeroAleatorio}}</p>
+
+  <h3>Captura de eventos (event handler)</h3>
+  <p>{{contador}}</p>
+  <button (click)="incrementar()" style="background-color: blue; color: white;">Sumar</button>
+  <button (click)="decrementar()" style="background-color: gold; color: black;">Restar</button>
+
+  <h3>Property Binding</h3>
+  <button [disabled]="!botonHabilitado" style="background-color: blue; color: white;">Enviar</button>
+  <button (click)="habilitarBoton()" style="background-color: green; color: white;">Habilitar botón</button>
 </div>
